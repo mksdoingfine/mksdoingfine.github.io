@@ -1,8 +1,14 @@
+---
+layout: home
+title: Posts
+permalink: /posts.html
+---
 <div class="container">
   recent_posts
 
   {% for post in site.medium_posts %}
-    {{ post.title }}
-    <hr />
+  {{ post.title }}
   {% endfor %}
+
+
 </div>

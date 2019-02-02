@@ -19,14 +19,18 @@ plugins:
 
 paginate: 5
 languages: ["mm", "en"]
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+collections:
+  medium_posts:
+    output: true
+permalink: /:categories/:title:output_ext
+
+defaults:
+  - scope:
+      path: ""
+      type: "medium_posts"
+    values:
+      layout: "medium_posts_details"
+  - scope:
+      path: ""
+    values:
+      layout: "medium_posts_details"
