@@ -17,6 +17,8 @@ plugins:
   - jekyll-paginate
   - jekyll-multiple-languages-plugin
 
+paginate: 5
+languages: ["mm", "en"]
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

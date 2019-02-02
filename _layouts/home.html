@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+{%- include head.html -%}
+
+<body>
+  {%- include navbar.html -%}
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {%- if page.url == "/" %}
+      {% else %}
+      <div class="breadcrumb-box">
+        {%- include breadcrumb.html -%}
+      </div>
+      <br />
+      {%- endif -%}
+      {{ content }}
+    </div>
+  </main>
+  <br />
+  <br />
+  <br />
+  {%- include footer.html -%}
+
+</body>
+
+</html>
