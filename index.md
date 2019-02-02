@@ -6,4 +6,10 @@ layout: home
 ---
 
 
+
+{%- include banner.html -%}
+
+
+{%- include recent_posts.html -%}
+
 hello world
