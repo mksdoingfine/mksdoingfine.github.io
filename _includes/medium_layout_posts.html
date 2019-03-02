@@ -4,7 +4,7 @@
     <div class="col-md-8 col-sm-12">
       {% assign posts = (site.medium_posts | sort:"date") | reverse %}
       {% for post in posts %}
-      <div class="container post">
+      <div class="post">
         <div class="row card-150h">
           <div class="col-lg-2 col-md-3 col-sm-2 col-3">
             <img src="{{ post.cover }}" class="card-img img-fluid" alt="{{ post.title }}">
@@ -20,7 +20,6 @@
                 Published At: {{ post.date | date: "%a, %b %d, %Y" }}
             </div>
           </div>
-          
         </div>
       </div>
       {% endfor %}
