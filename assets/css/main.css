@@ -13,7 +13,7 @@ h5{
   height: 90px;
   display: table-cell;
   width: 100vw;
-  border: 3px dashed #1c87c9;
+  /* border: 3px dashed #1c87c9; */
   vertical-align: middle;
   /* padding: 10px; */
 }
@@ -63,7 +63,7 @@ h5{
   display: table-cell;
   width: 100vw;
   height: calc(100vh - 500px);
-  border: 3px dashed #1c87c9;
+  /* border: 3px dashed #1c87c9; */
   vertical-align: middle;
   padding: 10px;
 }
@@ -112,15 +112,15 @@ h5{
 }
 .big-post{
   height: 280px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 .small-posts{
   height: 280px;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 .small-posts .card{
   height: 100px;
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
 }
 .banner-img{
   height: 150px;
