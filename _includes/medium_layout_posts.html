@@ -9,11 +9,11 @@
             <img src="{{ post.cover }}" class="card-img img-fluid" alt="{{ post.title }}">
           </div>
           <div class="col-lg-10 col-md-9 col-sm-12 col-9">
-            <div class="card-100h card-body">
-                <h5>{{ post.title }}</h5>
-                {{ post.short }}
+            <div class="card-100h card-body post-short">
+                <h5 class="mm">{{ post.title }}</h5>
+                <p class="mm">{{ post.short }}</p>
             </div>
-            <div class="card-100h card-body">
+            <div class="card-100h card-body post-date">
                 Published At: {{ post.date | date: "%a, %b %d, %y" }}
             </div>
           </div>

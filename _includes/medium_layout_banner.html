@@ -1,13 +1,21 @@
+
+
+
 <div class="container medium_layout_banner">
   <div class="row">
+      {% for post in site.medium_posts %}
+      {% if post.banner == true %}
     <div class="big-post col-md-6 col-sm-12">
       <div class="container">
-        <img src="{{ post.cover }}" class="card-img img-fluid" alt="{{ post.title }}">
-        <div class="card-body">
-          <h5>big post</h5>
-          <p>big post text</p>
+        <div class="banner-img" style="background-image:url({{ post.cover }})">
+        </div>
+        <div class="card-100h card-body post-short">
+          <h4 class="mm">{{ post.title }}</h4>
+          <p class="mm">{{ post.short }}</p>
         </div>
       </div>
+      {% endif %}
+      {% endfor %}
     </div>
 
     <div class="small-posts col-md-6 col-sm-12">
@@ -15,12 +23,12 @@
       <div class="container post">
         <div class="row card-100h">
             <div class="col-md-4 col-sm-2 col-3">
-              <img src="{{ post.cover }}" class="card-img img-fluid" alt="{{ post.title }}">
+              <img src="{{ post.cover }}" class="card-img img-fluid img-thumbnail" alt="{{ post.title }}">
             </div>
           <div class="col-md-8 col-sm-12 col-9">
-            <div class="card-body">
-              <h5>{{ post.title }}</h5>
-              {{ post.short }}
+            <div class="card-body post-short">
+              <h5 class="mm">{{ post.title }}</h5>
+              <p class="mm">{{ post.short }}</p>
             </div>
           </div>
         </div>
@@ -31,5 +39,4 @@
 
 </div>
 <hr />
-
 
