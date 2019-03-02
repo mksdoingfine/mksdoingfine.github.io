@@ -1,14 +1,32 @@
 ---
-layout: home
+layout: light_layout
 title: Posts
 permalink: /posts.html
 ---
 <div class="container">
-  recent_posts
-
-  {% for post in site.medium_posts %}
-  {{ post.title }}
-  {% endfor %}
-
+  <div class="row">
+    <div class="col-md-8 col-sm-12">
+      <div class="container">
+        <div class="row">
+          {% for post in site.medium_posts %}
+          <div class="col-md-8 col-sm-12">
+            <div class="card-body">
+              <h5>{{ post.title }}</h5>
+              {{ post.short }}
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <img src="{{ post.cover }}" class="card-img-top img-fluid" alt="{{ post.title }}">
+          </div>
+          <hr class="col-12" />
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4 col-sm-12">
+      side bar
+    </div>
+  </div>
 
 </div>
