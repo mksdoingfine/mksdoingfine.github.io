@@ -1,0 +1,35 @@
+<div class="container medium_layout_banner">
+  <div class="row">
+    <div class="big-post col-md-6 col-sm-12">
+      <div class="container">
+        <img src="{{ post.cover }}" class="card-img img-fluid" alt="{{ post.title }}">
+        <div class="card-body">
+          <h5>big post</h5>
+          <p>big post text</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="small-posts col-md-6 col-sm-12">
+      {% for post in site.medium_posts limit:3 %}
+      <div class="container post">
+        <div class="row card-100h">
+            <div class="col-md-4 col-sm-2 col-3">
+              <img src="{{ post.cover }}" class="card-img img-fluid" alt="{{ post.title }}">
+            </div>
+          <div class="col-md-8 col-sm-12 col-9">
+            <div class="card-body">
+              <h5>{{ post.title }}</h5>
+              {{ post.short }}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+<hr />
+
+

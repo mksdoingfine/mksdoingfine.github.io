@@ -1,0 +1,30 @@
+<div class="container medium_layout_posts">
+  <div class="row">
+    
+    <div class="col-md-8 col-sm-12">
+      {% for post in site.medium_posts limit:3 %}
+      <div class="container post">
+        <div class="row card-150h">
+          <div class="col-lg-2 col-md-3 col-sm-2 col-3">
+            <img src="{{ post.cover }}" class="card-img img-fluid" alt="{{ post.title }}">
+          </div>
+          <div class="col-lg-10 col-md-9 col-sm-12 col-9">
+            <div class="card-100h card-body">
+                <h5>{{ post.title }}</h5>
+                {{ post.short }}
+            </div>
+            <div class="card-100h card-body">
+                Published At: {{ post.date | date: "%a, %b %d, %y" }}
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="col-4 d-none d-sm-block">
+    </div>
+    
+  </div>
+</div>
