@@ -29,8 +29,8 @@ defaults:
       path: ""
       type: "medium_posts"
     values:
-      layout: "medium_posts_details"
+      layout: "medium_post_details"
   - scope:
       path: ""
     values:
-      layout: "medium_posts_details"
+      layout: "medium_post_details"
