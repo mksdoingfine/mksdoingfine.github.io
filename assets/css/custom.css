@@ -1,0 +1,4 @@
+.director-member-info{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
