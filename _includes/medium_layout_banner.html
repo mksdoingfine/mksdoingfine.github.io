@@ -6,20 +6,21 @@
       {% for post in site.medium_posts %}
       {% if post.banner == true %}
     <div class="big-post col-md-6 col-sm-12">
-      <div class="container">
         <div class="banner-img" style="background-image:url({{ post.cover }})">
         </div>
-        <div class="card-100h card-body post-short">
-          <h4 class="mm">{{ post.title }}</h4>
+        <div class="card-100h post-short">
+          <a href="{{ post.link }}">
+            <h4 class="mm">{{ post.title }}</h4>
+          </a>
           <p class="mm">{{ post.short }}</p>
         </div>
-      </div>
       {% endif %}
       {% endfor %}
     </div>
 
     <div class="small-posts col-md-6 col-sm-12">
-      {% for post in site.medium_posts limit:3 %}
+      {% assign posts = (site.medium_posts | sort:"date") | reverse %}
+      {% for post in posts limit:3 %}
       <div class="container post">
         <div class="row card-100h">
             <div class="col-md-4 col-sm-2 col-3">
@@ -27,7 +28,9 @@
             </div>
           <div class="col-md-8 col-sm-12 col-9">
             <div class="card-body post-short">
-              <h5 class="mm">{{ post.title }}</h5>
+              <a href="{{ post.link }}">
+                <h5 class="mm">{{ post.title }}</h5>
+              </a>
               <p class="mm">{{ post.short }}</p>
             </div>
           </div>

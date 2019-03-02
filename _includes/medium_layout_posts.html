@@ -2,7 +2,8 @@
   <div class="row">
     
     <div class="col-md-8 col-sm-12">
-      {% for post in site.medium_posts limit:3 %}
+      {% assign posts = (site.medium_posts | sort:"date") | reverse %}
+      {% for post in posts %}
       <div class="container post">
         <div class="row card-150h">
           <div class="col-lg-2 col-md-3 col-sm-2 col-3">
@@ -10,11 +11,13 @@
           </div>
           <div class="col-lg-10 col-md-9 col-sm-12 col-9">
             <div class="card-100h card-body post-short">
-                <h5 class="mm">{{ post.title }}</h5>
+                <a href="{{ post.link }}">
+                  <h5 class="mm">{{ post.title }}</h5>
+                </a>
                 <p class="mm">{{ post.short }}</p>
             </div>
             <div class="card-100h card-body post-date">
-                Published At: {{ post.date | date: "%a, %b %d, %y" }}
+                Published At: {{ post.date | date: "%a, %b %d, %Y" }}
             </div>
           </div>
           
